@@ -36,7 +36,6 @@ function App() {
             <h1>
                 My React Challenge
             </h1>
-            {/*<ErrorModal title={'title'} message={'message'}/>*/}
             <NewItem onAddItem={addItemHandler} />
             <ItemList items={items} />
         </div>

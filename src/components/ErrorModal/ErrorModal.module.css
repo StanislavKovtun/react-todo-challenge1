@@ -1,32 +1,52 @@
 
 .wrap {
     position: fixed;
-    width: 100vh;
+    width: 100%;
     height: 100vh;
     top: 0;
     left: 0;
-    /*z-index: 10;*/
     background: rgba(0, 0, 0, 0.7);
     display: flex;
     justify-content: center;
     align-items: center;
     transition: 0.5s;
+    animation: ani 0.5s forwards;
   }
   
   .modal {
-    /*top: 50vh;*/
+    position: absolute;
+    bottom: 45%;
     width: 200px;
     height: 150px;
     background: #ddd;
-    /*z-index: 100;*/
     overflow: hidden;
-
-    opacity: 0;
+    text-align: center;
     animation: ani 0.5s forwards;
-
+    background-color: #f6f4ef;
+    border-radius: 3px;
   }
   
   @keyframes ani {
     0% {opacity: 0;}
     100% {opacity: 1;}
+  }
+
+  .title {
+    background-color: #1172a5;
+    color: #f6f4ef;
+    margin: 0;
+  }
+
+  /*.message {
+    
+  }*/
+
+  .close {
+    border: none;
+    cursor: pointer;
+    background-color: #1172a5;
+    color: #f6f4ef;
+    padding: 0.5rem;
+    border-radius: 3px;
+    font-size: 1rem;
   }

@@ -1,15 +1,37 @@
-.item-box {
-    /*display: flex;*/
-    /*justify-content: space-between;*/
+.new-item-form {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    background-color: #69bdd2;
+    border-radius: 3px;
+    padding: 1rem;
+    box-shadow: 0 0 5px gray;
+    width: 200px;
 }
 
 .new-item-form button {
     display: block;
     margin-top: 20px;
+    border: none;
+    cursor: pointer;
+    background-color: #1172a5;
+    color: #f6f4ef;
+    padding: 0.5rem;
+    border-radius: 3px;
+    align-self: center;
+    font-size: 1rem;
 }
 .new-item-form label {
     display: block;
+    border-radius: 3px;
+    width: 100%;
+    color: #1172a5;
+    font-weight: 500;
 }
 .new-item-form input {
+    background-color: #f6f4ef;
     display: block;
+    border: none;
+    border-radius: 3px;
+    width: 100%;
 }

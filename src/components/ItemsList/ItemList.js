@@ -1,4 +1,5 @@
 import Item from "../Item/Item";
+import './ItemList.module.css';
 
 const ItemList = (props) => {
 

@@ -6,7 +6,7 @@ const NewItem = (props) => {
 
     const [name, setName] = useState('');
     const [age, setAge] = useState('');
-    const [isValidInput, setIsValidInput] = useState(true);
+    const [error, setError] = useState();
 
     const nameChangeHandler = (event) => {
         const nameInputValue = event.target.value;
@@ -23,13 +23,19 @@ const NewItem = (props) => {
 
         if (!name.trim()) {
             console.log('Inalid name');
-            setIsValidInput(false);
+            setError({
+                title: 'Invalid name',
+                message: `Name can't be empty`
+            });
             return;
         }
 
         if (!age.trim() || +age < 1) {
             console.log('Inalid age');
-            setIsValidInput(false);
+            setError({
+                title: 'Invalid age',
+                message: 'Age must be > 0'
+            });
             return;
         }
 
@@ -40,30 +46,25 @@ const NewItem = (props) => {
         };
 
         props.onAddItem(newItem);
-
         setName('');
         setAge('');
     }
 
     const onCloseErrorHandler = () => {
         console.log('close error');
-        setIsValidInput(true);
+        setError();
     }
 
-    console.log(isValidInput);
+    console.log(error);
 
     return (
         <div className="new-item">
-            {!isValidInput && <ErrorModal title={'title'} message={'message'} onCloseError={onCloseErrorHandler}/>}
+            {error && <ErrorModal title={error.title} message={error.message} onCloseError={onCloseErrorHandler} />}
             <form className={styles['new-item-form']} action="" onSubmit={formSubmitHandler}>
-                {/*<div className={styles['item-box']}>*/}
                 <label htmlFor="name">Name</label>
                 <input id='name' type='text' value={name} onChange={nameChangeHandler}></input>
-                {/*</div>*/}
-                {/*<div className={styles['item-box']}>*/}
                 <label>Age</label>
                 <input type='number' value={age} onChange={ageChangeHandler}></input>
-                {/*</div>*/}
                 <button type='submit'>Add new item</button>
             </form>
         </div>

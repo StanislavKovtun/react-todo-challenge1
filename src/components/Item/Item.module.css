@@ -1,0 +1,9 @@
+.item {
+    background-color: #1172a5;
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    color: #f6f4ef;
+    border-radius: 3px;
+    box-shadow: 0 0 5px gray;
+    width: 200px;
+}

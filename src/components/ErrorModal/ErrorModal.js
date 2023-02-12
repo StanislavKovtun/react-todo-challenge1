@@ -8,9 +8,9 @@ const ErrorModal = (props) => {
             <div
                 className={styles.modal}
                 onClick={e => e.stopPropagation()}>
-                <h2>{props.title}</h2>
-                <p>{props.message}</p>
-                <button onClick={props.onCloseError}>ok</button>
+                <h2 className={styles.title}>{props.title}</h2>
+                <p className={styles.message}>{props.message}</p>
+                <button className={styles.close} onClick={props.onCloseError}>Close</button>
             </div>
         </div>
     )
