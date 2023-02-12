@@ -1,0 +1,32 @@
+
+.wrap {
+    position: fixed;
+    width: 100vh;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    /*z-index: 10;*/
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+  }
+  
+  .modal {
+    /*top: 50vh;*/
+    width: 200px;
+    height: 150px;
+    background: #ddd;
+    /*z-index: 100;*/
+    overflow: hidden;
+
+    opacity: 0;
+    animation: ani 0.5s forwards;
+
+  }
+  
+  @keyframes ani {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }

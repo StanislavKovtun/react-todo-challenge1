@@ -1,0 +1,15 @@
+.item-box {
+    /*display: flex;*/
+    /*justify-content: space-between;*/
+}
+
+.new-item-form button {
+    display: block;
+    margin-top: 20px;
+}
+.new-item-form label {
+    display: block;
+}
+.new-item-form input {
+    display: block;
+}
